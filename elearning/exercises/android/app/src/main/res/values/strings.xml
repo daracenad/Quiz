@@ -1,0 +1,20 @@
+<resources>
+    <string name="api_url">https://lionfish-app-g6gdp.ondigitalocean.app/api/</string>
+    <string name="app_name">Ejercicios</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Test</string>
+    <string name="title_notifications">Banderas</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="ingresa_tu_contasena">Ingresa tu contraseña</string>
+    <string name="ingresa_tu_correo_electronico">Ingresa tu correo electrónico</string>
+    <string name="ingresa_tu_correo_y_contrasena">Ingresa tu correo y contraseña</string>
+    <string name="registrate">¿No tienes una cuenta? Regístrate</string>
+    <string name="completa_el_formulario">Completa el formulario</string>
+    <string name="nombre_y_apellido">Nombre y Apellido</string>
+    <string name="repetir_contrasena">Repetir contraseña</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="volver_al_login">Volver al login</string>
+    <string name="title_activity_quiz">QuizActivity</string>
+    <string name="actualizar">Actualizar</string>
+
+</resources>
