@@ -8,10 +8,10 @@ import cl.daracenad.elearning.quiz.domain.model.APIConst.Companion.GO_MATRICULAT
 import cl.daracenad.elearning.quiz.domain.model.APIConst.Companion.OK
 
 import cl.daracenad.elearning.quiz.domain.model.AppStatus
-import cl.daracenad.elearning.quiz.domain.services.course.app.AppEmailGetSrv
-import cl.daracenad.elearning.quiz.domain.services.course.app.AppSchoolIdGetSrv
-import cl.daracenad.elearning.quiz.domain.services.course.app.AppStudentIdGetSrv
-import cl.daracenad.elearning.quiz.domain.services.course.app.AppTokenGetSrv
+import cl.daracenad.elearning.quiz.domain.services.app.AppEmailGetSrv
+import cl.daracenad.elearning.quiz.domain.services.app.AppSchoolIdGetSrv
+import cl.daracenad.elearning.quiz.domain.services.app.AppStudentIdGetSrv
+import cl.daracenad.elearning.quiz.domain.services.app.AppTokenGetSrv
 import javax.inject.Inject
 
 /**

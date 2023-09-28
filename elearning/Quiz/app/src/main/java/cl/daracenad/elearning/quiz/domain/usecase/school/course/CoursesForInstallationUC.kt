@@ -5,7 +5,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import cl.daracenad.elearning.quiz.data.RepositorySchoolDB
 import cl.daracenad.elearning.quiz.domain.model.school.Course
-import cl.daracenad.elearning.quiz.domain.model.school.School
 import cl.daracenad.elearning.quiz.utils.usercase.DTOResult
 import javax.inject.Inject
 
@@ -17,7 +16,7 @@ class CoursesForInstallationUC @Inject constructor(
         get() = _dtoResultLD
 
         suspend operator fun invoke() {
-            _dtoResultLD.postValue(DTOResult.Loading())
+            _dtoResultLD.postValue(DTOResult.Loading("hola"))
 
             try {
                 _dtoResultLD.postValue(DTOResult.Success(

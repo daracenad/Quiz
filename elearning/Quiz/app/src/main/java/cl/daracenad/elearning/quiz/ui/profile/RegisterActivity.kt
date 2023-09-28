@@ -81,6 +81,8 @@ class RegisterActivity : AppCompatActivity() {
 
                     _binding.loading.isVisible = true
                 }
+
+                else -> {}
             }
         })
 

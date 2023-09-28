@@ -2,6 +2,7 @@ package cl.daracenad.elearning.quiz.ui.school.download
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
@@ -32,6 +33,7 @@ class CoursesForInstallationActivity : AppCompatActivity() {
         }
 
         bindObservers()
+
     }
 
     private fun bindObservers() {
@@ -58,14 +60,43 @@ class CoursesForInstallationActivity : AppCompatActivity() {
 
                     _binding.loading.isVisible = true
                 }
+
+                else -> {}
             }
+        }
+
+        viewmodel.coursesDownloadUCLD.observe(this){
+            _binding.loading.isVisible = false
+            when (it) {
+                is DTOResult.Success -> {
+                    _binding.tvMessage.text = it.message
+                }
+
+                is DTOResult.Error -> {
+                    _binding.tvMessage.text = it.message
+                }
+
+                is DTOResult.Loading -> {
+                    _binding.tvMessage.text = it.message
+                    _binding.loading.isVisible =true
+                }
+                is DTOResult.Message->{
+                    _binding.tvMessage.text = it.message
+
+                }
+                else -> {
+
+                }
+            }
+
         }
 
     }
 
     fun onClickListener(courseSelected: CourseSelected, isChecked: Boolean) {
         //viewmodel.modifyCoursesSelected(courseSelected, isChecked)
-        Toast.makeText(this@CoursesForInstallationActivity,"click curso ${courseSelected.course.name} ${isChecked}", Toast.LENGTH_LONG).show()
+        Log.e("msgdad CoursesForInstallationActivity","${courseSelected}")
+        viewmodel.downloadCourses(courseSelected.course)
     }
 
 

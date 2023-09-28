@@ -9,11 +9,11 @@ import cl.daracenad.elearning.quiz.data.network.IUserAPI
 import cl.daracenad.elearning.quiz.data.network.model.SchoolResponse
 import cl.daracenad.elearning.quiz.domain.model.school.School
 import cl.daracenad.elearning.quiz.domain.model.school.toDomain
-import cl.daracenad.elearning.quiz.domain.services.course.app.AppEmailPutSrv
-import cl.daracenad.elearning.quiz.domain.services.course.app.AppNamePutSrv
-import cl.daracenad.elearning.quiz.domain.services.course.app.AppSchoolIdPutSrv
-import cl.daracenad.elearning.quiz.domain.services.course.app.AppStudentIdPutSrv
-import cl.daracenad.elearning.quiz.domain.services.course.app.AppTokenUpdateSrv
+import cl.daracenad.elearning.quiz.domain.services.app.AppEmailPutSrv
+import cl.daracenad.elearning.quiz.domain.services.app.AppNamePutSrv
+import cl.daracenad.elearning.quiz.domain.services.app.AppSchoolIdPutSrv
+import cl.daracenad.elearning.quiz.domain.services.app.AppStudentIdPutSrv
+import cl.daracenad.elearning.quiz.domain.services.app.AppTokenUpdateSrv
 import cl.daracenad.elearning.quiz.utils.exception.APIDataNotSuccesFull
 import cl.daracenad.elearning.quiz.utils.exception.APINotSuccesFull
 import cl.daracenad.elearning.quiz.utils.usercase.DTOResult
@@ -36,7 +36,7 @@ class RegisterUC@Inject constructor(
         get() = _userResponseLiveData
 
     suspend operator fun invoke(email:String, name: String, password: String, passwordConfirm:String) {
-        _userResponseLiveData.postValue(DTOResult.Loading())
+        _userResponseLiveData.postValue(DTOResult.Loading("hola"))
 
         val response = api.registerPOST(name,email,password, passwordConfirm)
 
@@ -72,6 +72,8 @@ class RegisterUC@Inject constructor(
             is DTOResult.Loading -> {
 
             }
+
+            else -> {}
         }
 
     }

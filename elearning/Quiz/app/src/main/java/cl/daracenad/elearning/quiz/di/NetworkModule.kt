@@ -2,7 +2,7 @@ package cl.daracenad.elearning.quiz.di
 
 import cl.daracenad.elearning.quiz.utils.http.HeaderInterceptor
 
-import cl.daracenad.elearning.quiz.data.network.IAPIClient
+import cl.daracenad.elearning.quiz.data.network.IDownloadAPIClient
 import cl.daracenad.elearning.quiz.data.network.ISchoolAPI
 import cl.daracenad.elearning.quiz.data.network.IUserAPI
 import com.google.gson.GsonBuilder
@@ -32,8 +32,8 @@ object NetworkModule{
 
     @Singleton
     @Provides
-    fun provideAPIClient(retrofit: Retrofit):IAPIClient{
-        return retrofit.create(IAPIClient::class.java)
+    fun provideAPIClient(retrofit: Retrofit):IDownloadAPIClient{
+        return retrofit.create(IDownloadAPIClient::class.java)
     }
     @Singleton
     @Provides

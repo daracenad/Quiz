@@ -12,6 +12,6 @@ class Answer(
     val questionId:String
 )
 //permite crear un objeto model a partir de un serialize
-fun AnswerSerialize.toDomain() = Answer(id = answerId, name = answerName, description = answerDescription, answerIsOk, status = "AC" ,questionId =  questionId)
+fun AnswerSerialize.toDomain(status:String) = Answer(id = answerId, name = answerName, description = answerDescription, answerIsOk, status = status ,questionId =  questionId)
 fun AnswerEntity.toDomain() = Answer(id, name, description,isOk,status, questionId)
-fun Answer.toEntity() = AnswerEntity(id, name, description,isOk,status, questionId)
+fun Answer.toEntity(status:String) = AnswerEntity(id = id, name = name, description =description,isOk = isOk,status = status, questionId = questionId)

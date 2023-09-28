@@ -3,12 +3,12 @@ package cl.daracenad.elearning.quiz.utils
 import cl.daracenad.elearning.quiz.utils.http.HeaderInterceptor
 import cl.daracenad.elearning.quiz.data.network.model.LoginResponse
 import cl.daracenad.elearning.quiz.data.network.model.SchoolResponse
-import cl.daracenad.elearning.quiz.data.network.model.test.AnswerResponse
+import cl.daracenad.elearning.quiz.data.network.model.download.AnswerResponse
 import cl.daracenad.elearning.quiz.data.network.model.school.CourseResponse
 import cl.daracenad.elearning.quiz.data.network.model.sys.DonwloadTableResponse
-import cl.daracenad.elearning.quiz.data.network.model.test.QuestionResponse
-import cl.daracenad.elearning.quiz.data.network.model.test.TestTemplateResponse
-import cl.daracenad.elearning.quiz.data.network.model.test.TopicResponse
+import cl.daracenad.elearning.quiz.data.network.model.download.QuestionResponse
+import cl.daracenad.elearning.quiz.data.network.model.download.TestTemplateResponse
+import cl.daracenad.elearning.quiz.data.network.model.download.TopicResponse
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import retrofit2.Call

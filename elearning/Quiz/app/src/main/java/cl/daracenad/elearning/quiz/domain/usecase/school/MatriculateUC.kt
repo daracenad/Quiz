@@ -10,8 +10,8 @@ import cl.daracenad.elearning.quiz.data.network.model.school.EnrolledCoursePost
 import cl.daracenad.elearning.quiz.domain.model.school.School
 import cl.daracenad.elearning.quiz.domain.model.school.toDomain
 
-import cl.daracenad.elearning.quiz.domain.services.course.app.AppTokenGetSrv
-import cl.daracenad.elearning.quiz.domain.services.course.app.AppStudentIdGetSrv
+import cl.daracenad.elearning.quiz.domain.services.app.AppTokenGetSrv
+import cl.daracenad.elearning.quiz.domain.services.app.AppStudentIdGetSrv
 import cl.daracenad.elearning.quiz.utils.exception.APIDataNotSuccesFull
 import cl.daracenad.elearning.quiz.utils.exception.APINotSuccesFull
 import cl.daracenad.elearning.quiz.utils.usercase.DTOResult
@@ -30,7 +30,7 @@ class MatriculateUC @Inject constructor(
         get() = _dtoResultLD
 
     suspend operator fun invoke(courseIds: List<String>) {
-        _dtoResultLD.postValue(DTOResult.Loading())
+        _dtoResultLD.postValue(DTOResult.Loading("hola"))
 
         val token = appTokenGetSrv.invoke()
         val studentId = appStudentIdGetSrv.invoke()
@@ -49,6 +49,8 @@ class MatriculateUC @Inject constructor(
             is DTOResult.Loading -> {
 
             }
+
+            else -> {}
         }
     }
 

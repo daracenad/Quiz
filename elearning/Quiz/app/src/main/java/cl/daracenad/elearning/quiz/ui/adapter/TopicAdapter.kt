@@ -4,13 +4,13 @@ package cl.daracenad.elearning.quiz.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import cl.daracenad.elearning.quiz.data.database.entities.AppParameterEntity
+import cl.daracenad.elearning.quiz.data.database.entities.LocalParameterEntity
 
 import cl.daracenad.elearning.quiz.databinding.CardTopicBinding
 
 class TopicAdapter :RecyclerView.Adapter<TopicAdapter.TopicViewHolder>() {
 
-    private var oldData = emptyList<AppParameterEntity>()
+    private var oldData = emptyList<LocalParameterEntity>()
 
     class TopicViewHolder(val binding: CardTopicBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -33,7 +33,7 @@ class TopicAdapter :RecyclerView.Adapter<TopicAdapter.TopicViewHolder>() {
         return oldData.size
     }
 
-    fun setData(newData: List<AppParameterEntity>){
+    fun setData(newData: List<LocalParameterEntity>){
         oldData = newData
         notifyDataSetChanged()
     }

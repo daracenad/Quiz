@@ -64,6 +64,10 @@ class RepositorySchoolDB @Inject constructor(
         return courseDAO.isPendingInstallation()
     }
 
+    suspend fun installedCourse(id:String){
+        courseDAO.installed(id)
+    }
+
     fun courseAll(): List<CourseEntity> {
         return courseDAO.all()
     }

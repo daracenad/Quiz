@@ -28,5 +28,5 @@ interface ITopicDAO {
     suspend fun delete(vararg entity: TopicEntity)
 
     @Query("SELECT * FROM " + TopicEntity.TABLE_NAME)
-    fun all(): Flow<List<TopicEntity>>
+    fun all(): List<TopicEntity>
 }

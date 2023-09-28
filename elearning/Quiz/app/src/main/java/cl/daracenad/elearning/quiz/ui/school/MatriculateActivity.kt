@@ -64,6 +64,8 @@ class MatriculateActivity : AppCompatActivity() {
 
                     _binding.matriculateProgressBar.isVisible = true
                 }
+
+                else -> {}
             }
         }
 
@@ -79,6 +81,8 @@ class MatriculateActivity : AppCompatActivity() {
                 is DTOResult.Loading -> {
                     _binding.matriculateProgressBar.isVisible = true
                 }
+
+                else -> {}
             }
         }
     }

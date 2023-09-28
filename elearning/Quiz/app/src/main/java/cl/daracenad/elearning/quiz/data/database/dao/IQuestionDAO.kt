@@ -27,5 +27,5 @@ interface IQuestionDAO {
     suspend fun delete(vararg entity: QuestionEntity)
 
     @Query("SELECT * FROM " + QuestionEntity.TABLE_NAME)
-    fun all(): LiveData<List<QuestionEntity>>
+    fun all(): List<QuestionEntity>
 }

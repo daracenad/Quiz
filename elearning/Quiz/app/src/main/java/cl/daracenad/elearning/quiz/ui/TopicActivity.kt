@@ -12,7 +12,7 @@ import cl.daracenad.elearning.quiz.ui.viewmodel.TopicViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import androidx.appcompat.widget.SearchView
-import cl.daracenad.elearning.quiz.data.database.entities.AppParameterEntity
+import cl.daracenad.elearning.quiz.data.database.entities.LocalParameterEntity
 import kotlin.random.Random
 
 @AndroidEntryPoint
@@ -49,13 +49,13 @@ class TopicActivity @Inject constructor() : AppCompatActivity(),
         var result = randomGenerator.nextInt(30, 50)
 
 
-        var entity =  AppParameterEntity("${result}","uno", 1, null)
+        var entity =  LocalParameterEntity("${result}","uno", 1, null)
         mainViewModel.insertData(entity)
 
         searchDatabase("")
     }
     fun putApp(view:View){
-        val entity =  AppParameterEntity("Uno","uno", 1, null)
+        val entity =  LocalParameterEntity("Uno","uno", 1, null)
         mainViewModel.insertData(entity)
     }
 

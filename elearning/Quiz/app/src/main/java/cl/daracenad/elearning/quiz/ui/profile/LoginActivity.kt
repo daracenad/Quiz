@@ -63,6 +63,8 @@ class LoginActivity : AppCompatActivity() {
 
                     _binding.loading.isVisible = true
                 }
+
+                else -> {}
             }
         })
 

@@ -27,5 +27,5 @@ interface ITestTemplateDAO {
     suspend fun delete(vararg entity: TestTemplateEntity)
 
     @Query("SELECT * FROM " + TestTemplateEntity.TABLE_NAME)
-    fun all(): LiveData<List<TestTemplateEntity>>
+    fun all(): List<TestTemplateEntity>
 }

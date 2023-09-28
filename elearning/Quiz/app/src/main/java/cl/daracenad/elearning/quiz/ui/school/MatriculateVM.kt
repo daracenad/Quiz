@@ -8,7 +8,7 @@ import androidx.lifecycle.viewModelScope
 import cl.daracenad.elearning.quiz.data.RepositorySchoolDB
 import cl.daracenad.elearning.quiz.domain.UserProfileUC
 import cl.daracenad.elearning.quiz.domain.model.school.School
-import cl.daracenad.elearning.quiz.domain.services.course.app.AppStudentIdGetSrv
+import cl.daracenad.elearning.quiz.domain.services.app.AppStudentIdGetSrv
 import cl.daracenad.elearning.quiz.domain.usecase.school.MatriculateUC
 import cl.daracenad.elearning.quiz.ui.school.model.CourseSelected
 import cl.daracenad.elearning.quiz.utils.usercase.DTOResult

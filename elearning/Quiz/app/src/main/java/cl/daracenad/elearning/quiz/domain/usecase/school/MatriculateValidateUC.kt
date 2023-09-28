@@ -1,6 +1,6 @@
 package cl.daracenad.elearning.quiz.domain.usecase.school
 
-import cl.daracenad.elearning.quiz.data.RepositoryDB
+import cl.daracenad.elearning.quiz.data.RepositoryDownloadDB
 import javax.inject.Inject
 
 /**
@@ -8,12 +8,12 @@ import javax.inject.Inject
  * si se descargo los cursos de dicha matricular
  */
 class MatriculateValidateUC  @Inject constructor(
-    private val repositoryDB: RepositoryDB
+    private val repositoryDownloadDB: RepositoryDownloadDB
 ){
 
     suspend operator fun invoke(){
         //Verificar si esta matriculado
-        //repositoryDB.matriculateFindForId()
+        //repositoryDownloadDB.matriculateFindForId()
 
     }
 }

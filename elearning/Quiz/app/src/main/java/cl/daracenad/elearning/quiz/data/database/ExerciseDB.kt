@@ -3,22 +3,24 @@ package cl.daracenad.elearning.quiz.data.database
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import cl.daracenad.elearning.quiz.data.database.dao.IAnswerDAO
+import cl.daracenad.elearning.quiz.data.database.dao.IAppParameterDAO
 import cl.daracenad.elearning.quiz.data.database.dao.ICourseDAO
 import cl.daracenad.elearning.quiz.data.database.dao.IDownloadTableDAO
 import cl.daracenad.elearning.quiz.data.database.dao.IEnrolledCourseDAO
 import cl.daracenad.elearning.quiz.data.database.dao.IMatriculateDAO
-import cl.daracenad.elearning.quiz.data.database.dao.IParameterDAO
+import cl.daracenad.elearning.quiz.data.database.dao.ILocalParameterDAO
 import cl.daracenad.elearning.quiz.data.database.dao.IQuestionDAO
 import cl.daracenad.elearning.quiz.data.database.dao.ISchoolDAO
 import cl.daracenad.elearning.quiz.data.database.dao.IStudentDAO
 import cl.daracenad.elearning.quiz.data.database.dao.ITestTemplateDAO
 import cl.daracenad.elearning.quiz.data.database.dao.ITopicDAO
 import cl.daracenad.elearning.quiz.data.database.entities.AnswerEntity
+import cl.daracenad.elearning.quiz.data.database.entities.AppParameterEntity
 import cl.daracenad.elearning.quiz.data.database.entities.CourseEntity
 import cl.daracenad.elearning.quiz.data.database.entities.DownloadTableEntity
 import cl.daracenad.elearning.quiz.data.database.entities.EnrolledCourseEntity
 import cl.daracenad.elearning.quiz.data.database.entities.MatriculateEntity
-import cl.daracenad.elearning.quiz.data.database.entities.AppParameterEntity
+import cl.daracenad.elearning.quiz.data.database.entities.LocalParameterEntity
 import cl.daracenad.elearning.quiz.data.database.entities.QuestionEntity
 import cl.daracenad.elearning.quiz.data.database.entities.SchoolEntity
 import cl.daracenad.elearning.quiz.data.database.entities.StudentEntity
@@ -31,20 +33,22 @@ import cl.daracenad.elearning.quiz.data.database.entities.TopicEntity
     DownloadTableEntity::class,
     EnrolledCourseEntity::class,
     MatriculateEntity::class,
+    LocalParameterEntity::class,
     AppParameterEntity::class,
     QuestionEntity::class,
     SchoolEntity::class,
     StudentEntity::class,
     TestTemplateEntity::class,
     TopicEntity::class
-], version = 8)
+], version = 9)
 abstract class ExerciseDB:RoomDatabase() {
     abstract fun answerDAO(): IAnswerDAO
     abstract fun courseDAO(): ICourseDAO
     abstract fun downloadTableDAO(): IDownloadTableDAO
     abstract fun enrolledCourseDAO(): IEnrolledCourseDAO
     abstract fun matriculateDAO(): IMatriculateDAO
-    abstract fun parameterDAO(): IParameterDAO
+    abstract fun localParameterDAO(): ILocalParameterDAO
+    abstract fun appParameterDAO(): IAppParameterDAO
     abstract fun questionDAO(): IQuestionDAO
     abstract fun schoolDAO(): ISchoolDAO
     abstract fun studentDAO(): IStudentDAO

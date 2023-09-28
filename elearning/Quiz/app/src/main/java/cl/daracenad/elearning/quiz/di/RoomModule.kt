@@ -69,6 +69,10 @@ object RoomModule {
 
     @Singleton
     @Provides
-    fun provideParameterDAO(db:ExerciseDB) = db.parameterDAO()
+    fun provideLocalParameterDAO(db:ExerciseDB) = db.localParameterDAO()
+
+    @Singleton
+    @Provides
+    fun provideAppParameterDAO(db:ExerciseDB) = db.appParameterDAO()
 
 }

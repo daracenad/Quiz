@@ -23,6 +23,10 @@ interface ICourseDAO {
     @Update
     suspend fun update(vararg entity: CourseEntity)
 
+    @Query("update ${CourseEntity.TABLE_NAME} set status='AC' where id = :id")
+    suspend fun installed(id:String)
+
+
     @Delete
     suspend fun delete(vararg entity: CourseEntity)
 
